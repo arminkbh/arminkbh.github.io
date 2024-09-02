@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Calculator made by armin :D
+        </title>
+    </head>
+    <body>
+        <a href="..\main.html">
+            <button id="mainbutton">
+                Click me to go back to the main!
+            </button>
+        </a>
+        <p id="text">By armin</p>
+        <div class="container">
+            <div class="a"></div>
+            <input type="text" readonly class="displayC" id="display" value="">
+            <div class="calculator">
+                 <div class="buttons">
+                    <div class="l0f">
+                        <input type="button" value="AC" id="ac" onclick="clearEv()">
+                        <input type="button" value="DE" id="de" onclick="clearonlylast()">
+                    </div>
+                    <div class="l1">
+                       <input type="button" value="(" onclick="append('(')">
+                       <input type="button" value=")" onclick="append(')')">
+                       <input type="button" value="." id="dot" onclick="append('.')">
+                       <input type="button" value="/" id="slash" onclick="append('/')">
+                    </div>
+
+                    <div class="l2">
+                       <input type="button" value="7" name="n7" onclick="append('7')">
+                       <input type="button" value="8" name="n8" onclick="append('8')">
+                       <input type="button" value="9" name="n9" onclick="append('9')">
+                       <input type="button" value="x" name="gan" onclick="append('*')">
+                    </div>
+                    <div class="l3">
+                        <input type="button" value="4" name="n4" onclick="append('4')">
+                        <input type="button" value="5" name="n5" onclick="append('5')">
+                        <input type="button" value="6" name="n6" onclick="append('6')">
+                        <input type="button" value="-" name="minus" onclick="append('-')">
+                    </div>
+                    <div class="l4">
+                        <input type="button" value="1" name="n1" onclick="append('1')">
+                        <input type="button" value="2" name="n2" onclick="append('2')">
+                        <input type="button" value="3" name="n3" onclick="append('3')">
+                        <input type="button" value="+" name="plus" onclick="append('+')">
+                    </div>
+                    <div class="l5">
+                        <input type="button" value="0" onclick="append('0')">
+                        <input type="button" value="00" onclick="append('00')">
+                        <input type="button" value="=" class="equal" onclick="figure()">
+                    </div>
+                 </div>
+            </div>
+        </div>
+    <style type="text/css">
+        body {background-color: rgb(229, 253, 252);}
+        #mainbutton {
+            color: rgb(0, 0, 0);
+            background-color: rgb(203, 231, 255);
+            width: 100px;
+            height: 100px;
+            border-radius: 3px;
+            border-style:dashed;
+        }
+        #text {
+            position: absolute;
+            top: 10px;
+            left: 325px;
+        }
+        .a {
+            width: 400px;
+            height: 570px;
+            background-color: rgb(57, 75, 75);
+            position: absolute;
+            top: 35px; left: 365px;
+            border: 25px, rgb(0, 0, 0);
+            border-radius: 10%;
+        }
+        .equal {
+            width: 152px;
+            height: 70px;
+            position: absolute;
+            left: 170px
+        }
+        .calculator input:not(.equal) {
+            width: 70px;
+            height: 70px;
+            margin-left: 7px;
+        }
+        .calculator input {cursor:pointer;}
+        .calculator input {font-size: x-large;}
+        .l0f {position: absolute; top: 135px; left: 400px;}
+        .l1 {
+            position: absolute;
+            top: 210px;
+            left: 400px;;
+        }
+        #display {
+            width: 325px;
+            height: 70px;
+            position: absolute;
+            top: 50px;
+            left: 406.5px;
+            font-size: x-large;
+        }
+        .l2 { position: absolute; top: 285px; left: 400px; }
+        .l3 { position: absolute; top: 360px; left: 400px; }
+        .l4 { position: absolute; left: 400px; top: 435px; }
+        .l5 { position: absolute; left: 400px; top: 510px; }
+    </style>
+    <script src="calculate.js"></script>
+</html>

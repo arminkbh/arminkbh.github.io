@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        #buttonF1 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(211, 231, 248);
+            color: #000; border-radius: 100%;
+        }
+        #SWC { 
+            width: 150px; 
+            height: 36px;
+            color: #000;
+            font-size: medium;
+            position: absolute;
+            left: 550px;
+        } #buttonV {width: default; height: 36px; position: absolute; left: 705px;
+            font-size: small;
+        }
+        #showParam {position: absolute; top: 330px; left: 550px;}
+        #ParamCountry {position: absolute; top: 63%; left: 30%;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+        #paramForLocal1A {font-family: 'Times New Roman'; font-weight: 600;}
+        #toolText {font-family: Arial, Helvetica, sans-serif;}
+        #selectWorld {position: absolute; top: 72%; left: 35%; height: 27px; width: default;}
+        #RCinput {position: absolute; top:77%; left: 35%; height: default; width: 90px;}
+        #OutputRC {position: absolute; top: 462px; left: 42%; width: 300px; height: 48px;
+            font-size: x-large; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        } 
+
+        #var1 {position: absolute; top: 600px; left: 450px;}
+        #var2 {position: absolute; top: 600px; left: 650px;}
+        #ResultSum {position: absolute; top: 630px; left: 550px;}
+        #GenerateRandom {position: absolute; top: 660px; left: 600px;}
+    </style>
+    <head>
+        <title>Tools</title>
+    </head>
+    <body>
+        <a href="..\index.html">
+            <button id="buttonF1">If you're done click me to go back</button>
+        </a>
+        <center>
+            <div class="ToolAlert">
+                <p id="toolText">This tool will make the website repeat you</p>
+                <input type="text" value="" id="querSac">
+                <button id="skS" onclick="alm();">Repeat</button>
+            </div>
+            <br><br><br>
+            <div class="rmNUM">
+                <p id="paramForLocal1A">
+                    Choose a country then click generate to Generate a
+                    random city in the country
+                </p>
+                <select name="swc" id="SWC" class="SWC">
+                    <option value="SWEDEN">Sweden</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="USA">United States</option>
+                    <option value="TURKEY">Türkiye</option>
+                    <option value="RUSSIA">Russia</option>
+                    <option value="IRAN">Iran</option>
+                    <option value="CHINA">China</option>
+                    <option value="BRAZIL">Brazil</option>
+                    <option value="JAPAN">Japan</option>
+                    <option value="INDONESIA">Indonesia</option>
+                </select>
+                <button id="buttonV">Generate</button>
+                <input type="text" id="showParam" readonly>
+            </div> 
+            <div class="RCdiv">
+                <p id="ParamCountry">
+                    Click "Generate" to generate a random country in the continent.
+                </p>
+                <input type="button" value="Generate" id="RCinput">
+                <input type="text" readonly id="OutputRC">
+                <select name="SelectWP" id="selectWorld" class="SELECTWORLDPART">
+                    <option value="ALL" id="Rinput1">All</option>
+                    <option value="EUROPE" id="Rinput2">Europe</option>
+                    <option value="ASIA" id="Rinput3">Asia</option>
+                    <option value="OCEANIA" id="Rinput4">Oceania</option>
+                    <option value="SOUTH" id="Rinput5">S. America</option>
+                    <option value="NORTH" id="Rinput6">N. America</option>
+                    <option value="AFRICA" id="Rinput7">Africa</option>
+                </select>
+            </div>
+        </center>
+    </body>
+    <div>
+        <p id="ParamForLocal2A">
+Type two number and then click the button to generate a random number between the numbers
+        </p>
+        <input type="number" id="var2">
+        <input type="number" id="var1">
+        <input type="button" value="Generate" id="GenerateRandom">
+        <input type="text" readonly id="ResultSum">
+    </div>
+    <script src="Scripts/Script.js"></script>
+    <script src="Scripts/rndmC.js"></script>
+    <script src="Scripts/RC.js"></script>
+    <script src="Scripts/NumberGenerator.js"></script>
+</html>

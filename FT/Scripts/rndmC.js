@@ -199,7 +199,7 @@ function returnCity() {
         else if (CHNmr == 19){param.value = "Changsha"; exchangeNumberCH();}
         else if (CHNmr == 20){param.value = "Kunming"; exchangeNumberCH();}
     }
-    else if (ops.value = "JAPAN") {
+    else if (ops.value == "JAPAN") {
         const jpCT = [
             "Tokyo", "Yokohama", "Osaka",
             "Nagoya", "Sapporo", "Fukuoka",

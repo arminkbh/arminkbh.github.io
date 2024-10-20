@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="deco.css">
+    </head>
+    <body>
+        <div class="headerTitle">
+            <h1 id="mainBanner">Last minute cooking</h1>
+            <h2 style="position: absolute; left: 450px; top: 45px;">
+                What will the chefs give you for recipe?</h2>
+        </div>
+        <div><a href="..\index.html"><p
+            style="position: absolute; top: 10px; left: 5px;
+            font-size: large; color: rgb(13, 59, 0);
+            font-family: 'Times New Roman'; font-weight: 700;
+            outline: 1px solid black; border-radius: 20%;">Click here to go back!</p></a></div>
+        <div class="ingredients">
+            <p style="position: absolute; top: 125px; left: 50px; font-size: xx-large;">
+                Carbohydrates:</p>
+            <select name="Dehydrate" id="dehydrates"> 
+                <option value="NONE">None</option>
+                <option value="RICE">Rice</option>
+                <option value="SPAGHETTI">Spaghetti</option>
+                <option value="NOODLES">Noodles</option>
+                <option value="BREAD">Bread</option>
+                <option value="FLOUR">Flour</option>
+            </select>
+            <p style="position: absolute; font-size: xx-large; top: 300px; left: 50px;">
+                Proteins: 
+            </p>
+            <select name="Protein" id="protein">
+                <option value="NONE">None</option>
+                <option value="BEEF">Beef</option>
+                <option value="PORK">Pork</option>
+                <option value="LAMB">Lamb</option>
+                <option value="CHICKEN">Chicken</option>
+                <option value="FISH">Fish</option>
+                <option value="GOAT">Goat</option>
+                <option value="BEANS">Beans</option>
+            </select>
+
+            <p id="Param1">Vegetables (Optional)</p>
+            <select name="Vegetables" id="Vegetables">
+                <option value="NONE">None</option>
+                <option value="CUCUMBER">Cucumber</option>
+                <option value="CARROT">Carrot</option>
+                <option value="ORANGE">Orange</option>
+                <option value="LEMON">Lemon</option>
+                <option value="BANANA">Banana</option>
+            </select>
+
+            <p style="position: absolute; left: 50px;
+            top: 600px; font-size: xx-large;">Flavor seasoning (Optional)</p>
+            <select name="Seasons" id="Seasons">
+                <option value="SOY">Soy sauce</option>
+                <option value="CHILI">Chili sauce</option>
+                <option value="MAYO">Mayonaisse</option>
+                <option value="SESAME">Sesame seed</option>
+                <option value="SALT">Salt</option>
+                <option value="PEPPER">Pepper</option>
+            </select>
+        </div>
+      
+
+        <div class="Output" id="Output">
+            <p id="OutputText">You havent given the chefs the ingredients!</p>
+        </div>
+        <p style="position: absolute; top: 375px; left: 420px; font-size: xx-large;">
+        👨‍🍳👩‍🍳👉</p>
+        <input type="button" value="Cook" id="outputButton1A">
+        <script src="node.js"></script>
+    </body>
+</html>

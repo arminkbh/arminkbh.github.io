@@ -1,0 +1,32 @@
+#buttonF1 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(211, 231, 248);
+    color: #000; border-radius: 100%;
+}
+#SWC { 
+    width: 150px; 
+    height: 36px;
+    color: #000;
+    font-size: medium;
+    position: absolute;
+    left: 550px;
+} #buttonV {width: default; height: 36px; position: absolute; left: 705px;
+    font-size: small;
+}
+#showParam {position: absolute; top: 330px; left: 550px;}
+#ParamCountry {position: absolute; top: 63%; left: 30%;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+#paramForLocal1A {font-family: 'Times New Roman'; font-weight: 600;}
+#toolText {font-family: Arial, Helvetica, sans-serif;}
+#selectWorld {position: absolute; top: 72%; left: 35%; height: 27px; width: default;}
+#RCinput {position: absolute; top:770px; left: 35%; height: default; width: 90px;}
+#OutputRC {position: absolute; top: 462px; left: 42%; width: 300px; height: 48px;
+    font-size: x-large; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+} 
+#var1 {position: absolute; top: 600px; left: 450px;}
+#var2 {position: absolute; top: 600px; left: 650px;}
+#ResultSum {position: absolute; top: 630px; left: 550px;}
+#GenerateRandom {position: absolute; top: 660px; left: 600px;}
+#ParamForLocal2A {position: absolute; top: 550px; left: 360px;}
+body {background-color: aliceblue;}

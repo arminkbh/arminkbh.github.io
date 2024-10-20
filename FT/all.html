@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tools</title>
+    </head>
+    <body>
+        <a href="..\index.html">
+            <button id="buttonF1">If you're done click me to go back</button>
+        </a>
+        <center>
+            <div class="ToolAlert">
+                <p id="toolText">This tool will make the website repeat you</p>
+                <input type="text" value="" id="querSac">
+                <button id="skS" onclick="alm();">Repeat</button>
+            </div>
+            <br><br><br>
+            <div class="rmNUM">
+                <p id="paramForLocal1A">
+                    Choose a country then click generate to Generate a
+                    random city in the country
+                </p>
+                <select name="swc" id="SWC" class="SWC">
+                    <option value="SWEDEN">Sweden</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="USA">United States</option>
+                    <option value="TURKEY">Türkiye</option>
+                    <option value="RUSSIA">Russia</option>
+                    <option value="IRAN">Iran</option>
+                    <option value="CHINA">China</option>
+                    <option value="BRAZIL">Brazil</option>
+                    <option value="JAPAN">Japan</option>
+                    <option value="INDONESIA">Indonesia</option>
+                </select>
+                <button id="buttonV">Generate</button>
+                <input type="text" id="showParam" readonly>
+            </div> 
+            <div class="RCdiv">
+                <p id="ParamCountry">
+                    Click "Generate" to generate a random country in the continent.
+                </p>
+                <input type="button" value="Generate" id="RCinput">
+                <input type="text" readonly id="OutputRC">
+                <select name="SelectWP" id="selectWorld" class="SELECTWORLDPART">
+                    <option value="ALL" id="Rinput1">All</option>
+                    <option value="EUROPE" id="Rinput2">Europe</option>
+                    <option value="ASIA" id="Rinput3">Asia</option>
+                    <option value="OCEANIA" id="Rinput4">Oceania</option>
+                    <option value="SOUTH" id="Rinput5">S. America</option>
+                    <option value="NORTH" id="Rinput6">N. America</option>
+                    <option value="AFRICA" id="Rinput7">Africa</option>
+                </select>
+            </div>
+            <div>
+        <p id="ParamForLocal2A">
+Type two number and then click the button to generate a random number between the numbers
+        </p>
+        <input type="number" id="var2">
+        <input type="number" id="var1">
+        <br><br>
+        <input type="button" value="Generate" id="GenerateRandom">
+        <br>
+        <input type="text" readonly id="ResultSum">
+        </div>
+    </center>
+    </body>
+
+    <script src="Scripts/Script.js"></script>
+    <script src="Scripts/rndmC.js"></script>
+    <script src="Scripts/RC.js"></script>
+    <script src="Scripts/NumberGenerator.js"></script>
+</html>

@@ -5,7 +5,7 @@ function append(input) {
 }
 function figure() {
     if (display.value != "89(**999/(") {
-        eval(display.value);
+        display.value = eval(display.value);
     } else {
         display.value = "Apa Kebabrulle";
     }

@@ -58,7 +58,19 @@
             font-size: larger; background-color: rgb(209, 214, 164);
             cursor: pointer; border-radius: 10%; color: #000;
         }
-
+        #translatorbtn {
+            position: absolute; 
+            left: 300px; top: 410px;
+            width: 100px; height: 100px;
+            border-radius: 10%;
+            background-color: rgb(220, 239, 255);
+            font-size: large;
+            font-weight: 510;
+            color: darkblue;
+        }
+        #translatorbtn:hover {
+            cursor: pointer;
+        }
     </style>
     <head>
         <center>
@@ -68,6 +80,11 @@
         </center>
     </head>
     <body>
+        <div id="translatorDIV">
+            <a href="Translate/main.html">
+                <button id="translatorbtn">Translator</button>
+            </a>
+        </div>
         <div id="toolsDIV" class="tools">
             <a href="FT/all.html">
                 <button id="ButtonForTools">Click me for some fun tools!</button>
@@ -107,6 +124,4 @@
                 </div>
         </div>
     </body>
-    <script>
-    </script>
 </html>

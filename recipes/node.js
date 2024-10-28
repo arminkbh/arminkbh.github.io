@@ -2,6 +2,7 @@ let dehydrates = document.getElementById("dehydrates")
 let protein = document.getElementById("protein")
 let vegetables = document.getElementById("Vegetables")
 let text = document.querySelector("#OutputText")
+let seasonings = document.querySelector("#Seasons")
 
 function change() {
     if (dehydrates.value == "NONE" && protein.value == "NONE"
@@ -73,9 +74,35 @@ function change() {
     else if (dehydrates.value == "BREAD" && protein.value == "BEANS") {
         text.innerHTML = `
         <h2>Brittish toast & beans</h2>
+        <h4> The bread: </h4>
         1)Take up a small pan and put some oil in it, and put the temperature to medium-high about
         7/10<br>
-        2)`
+        2) Put the bread(s) in the pan and stir it in the oil until you feel like
+        it's roasted enough<br>
+        3) Take out the bread and now you're done with the bread.<br>
+        Lets move on to the beans
+        <h4> The beans: </h4>
+        1) Take a new small saucepan, and put your beans in there.
+        <br>2) Pour some water that should fill about 40% of the saucepan<br>
+        3) Boil the water.<br>
+        4) You can manually take one bean and taste it. <br>
+        If it's too hard, cook it longer. <br><br>
+        There is no "time" on how long to cook the beans so <br>
+        you have to manually test if they're good enough.
+        <br><br>
+        And as always, <h3>Voilá</h3>`
+    }
+    else if (seasonings.value == "SOY" && vegetables.value == "CUCUMBER") {
+        text.innerHTML = `
+        Suprisingly we do have a recipe for these ingredients, somehow.
+        <br> Anyways, here you go, a really simple recipe:
+        <h2>Chinese Cucumber with Soy (sauce)</h2>
+        1) Cut your cucumber into thin slices.
+        <br><br>2) Put it in a small bowl.<br><br>
+        3) Put some soy sauce in the bowl.<br><br>
+        4) Mix it for a little bit.
+        <h4> And boom, a super simple recipe </h4>
+        `;
     }
 
     else {

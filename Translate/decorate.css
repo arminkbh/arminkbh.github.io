@@ -1,0 +1,24 @@
+#mainInput {
+    font-size: medium;
+    position: absolute;
+    top: 70px;
+    left: 5px;
+}
+
+#mainOutput {
+    position: absolute;
+    top: 70px;
+    left: 700px;
+    font-size: medium;
+}
+#SelectLang {
+    position: absolute; left: 700px; top: 3px; width: 500px; height: 50px;
+    font-size: x-large; font-family: monospace;
+}
+
+#SelectLang:hover {
+    cursor: pointer;
+}
+#SelectLang select:hover {
+    cursor: pointer
+}

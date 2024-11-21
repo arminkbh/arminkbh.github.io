@@ -7,6 +7,7 @@ function ReplaceListeners(a) {
     try {
         input.removeEventListener("input", TranslateBrittish);
         input.removeEventListener("input", TranslateGen);
+        input.removeEventListener("input", TranslateOrten);
     }catch {console.log("Error, move on")}
     input.addEventListener("input", a)
 }
@@ -69,14 +70,19 @@ function TranslateBrittish() {
         "gonna" : "boundfull to", "going to" : "boundfull to", "she" : "she",
         "her" : "her", "him" : "him", "those" : "thays", "know" : "recognize",
         "who" : "which person", "knows" : "recognizes", "bros" : "brothers",
-        "goes" : "moves", "going": "moving", "dont" : "inrecommended to perform"
+        "goes" : "moves", "going": "moving", "dont" : "inrecommended to perform",
+        "dollars" : "punds", "dollar" : "pund", "damn" : "darn", "car": "fast-moving machine",
+        "ass": "bum"
     };
     let result = input.value;
 
     for (const [key, value] of Object.entries(words)) {
         let REG = new RegExp(`\\b${key}\\b`, "gi")
         result = result.replace(REG, value)
-    }
+    } 
+    result = result.replace(/([!?.]\s*)([a-zA-Z])/g, (match, separation, char) =>{
+        return separation + char.toUpperCase();
+    })
     output.value = result.charAt(0).toUpperCase() + result.slice(1);
 }
 
@@ -119,6 +125,9 @@ function TranslateGen() {
         let REG = new RegExp(`\\b${key}\\b`, "gi");
         out = out.replace(REG, value);
     }
+    out = out.replace(/([!.?]\s*)([a-zA-Z])/g, (match, separetor, char) => {
+        return separetor + char.toUpperCase();
+    });
     output.value = out.charAt(0).toUpperCase() + out.slice(1);
 }
 
@@ -131,14 +140,56 @@ function GangstaBritish() {
         "trouble" : "beef", "argument" : "beef", "lure" : "bait", "fake" : "pagan",
         "lots of" : "bare", "a lot" : "bare", "money" : "ps", "scared" : "shook",
         "nervous" : "shook", "bank card" : "square", "gun" : "strap", "car" : "whip",
-        "stuff" : "type shi'", "thing" : "type shi'", "you know" : "type shi'"
+        "stuff" : "type shi'", "thing" : "type shi'", "you know" : "type shi'",
+        "shit" : "shi'", "alright" : "aight bet", "area" : "block", "rivals" : "opps",
+        "rival" : "opp", "ok": "bet", "yes": "yeah", "no": "nah", "have": "got",
+        "gonna": "finna'"
     }
     let Val = input.value;
     for (const [key, value] of Object.entries(words)) {
         let regex = new RegExp(`\\b${key}\\b`, "gi");
         Val = Val.replace(regex, value);
     }
+    Val = Val.replace(/([!.?]\s*)([a-zA-Z])/g, (match, preference, char) => {
+        return preference + char.toUpperCase();
+    });
     output.value = Val.charAt(0).toUpperCase() + Val.slice(1);
+}
+
+function TranslateOrten() {
+    let replacements = {
+        "går": "taggar","hej": "sho", "tja": "sho", "tjena": "sho", "tjenare": "sho",
+        "men": "lak", "arg": "lack", "väldigt": "çok", "jag svär": "walla",
+        "svär": "walla", "är du": "äru", "kom igen": "ajde", "skynda": "yalla",
+        "fan": "fack", "pengar": "para", "nej": "nah", 
+        "gå": "gitt", "där": "shurda", "jätte": "çok", "tjej": "gäri",
+        "flickvän": "guzz", "pistol": "tabbe", "vapen": "tabbe", "rätt": "jetski",
+        "rival":"opp", "kompis": "bror", "vän": "bror", "liksom": "yani",
+        "typ": "yani", "ungefär": "yani", "snygg": "kattig", "snygging": "katt",
+        "telefon nummer": "snap", "wow": "abooow", "shit": "abooow", 
+        "oj": "abow", "herregud": "abooow", "blå": "aina", "polis": "aina",
+        "okej": "aight", "säljer": "becknar", "sniffar": "becknar", "sniffa": "beckna",
+        "sniff": "beck", "snott": "baxat", "tagit": "baxat", "ta": "baxa", "sno": "baxa",
+        "sälj": "baxa", "viktig": "chisko", "viktigt": "chisko", "ful": "fågel",
+        "äcklig": "fågel", "rumpa": "gött", "åsna": "hmar", "odjur": "haywan", "djur": "haywan",
+        "pajas": "majmun", "apa": "majmun", "ragga": "mäka", "raggar": "mäkkar", "stöt": "mäk",
+        "stöten": "mäken", "raggen": "mäken", "rasist": "rarrare", "svensk": "suedi",
+        "sverige": "sued", "svenne": "suedi", "ey": "waryaa", "mannen": "waryaa",
+        "hallå": "waryaa", "skott": "zip", "tjejer": "gäris", "polisen": "aina",
+        "till": "a", "Ja": "a", "här": "burda", "ass": "bunda", "rumpan": "götten",
+        "pistolen": "tabben", "pistoler": "tabber", "pistolerna": "tabberna",
+        "tog": "baxade"
+    }
+    let main_output = input.value;
+    for (const [key,value] of Object.entries(replacements)) {
+        let regex = new RegExp(`\\b${key}\\b`, "gi");
+        main_output = main_output.replace(regex, value).replace("så", "khod").replace("Så", "Khod");
+        main_output = main_output.replace("gå", "gitt").replace("Gå", "Gitt").replace("jätte", "çok ");
+    }
+    main_output = main_output.replace(/([!.?]\s*)([a-zA-Z])/g, (match, separator, char) => {
+        return separator + char.toUpperCase();
+    });
+    output.value = main_output.charAt(0).toUpperCase() + main_output.slice(1);
 }
 
 function SetLang() {
@@ -148,6 +199,9 @@ function SetLang() {
         ReplaceListeners(TranslateGen);
     } else if (SL.value == "BG") {
         ReplaceListeners(GangstaBritish)
+    }
+    else if (SL.value == "ORTEN") {
+        ReplaceListeners(TranslateOrten)
     }
 }
 SetLang();

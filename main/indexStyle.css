@@ -1,0 +1,129 @@
+body {
+    animation: body-background-animation 7s infinite;
+}
+@keyframes body-background-animation {
+    0%{
+        background-color: rgb(198, 198, 198);
+    } 50% {
+        background-color: rgb(255, 255, 255);
+    }
+    100%{
+        background-color: rgb(199, 199, 199);
+    }
+}
+.buttons-display {
+    margin: 100px 0 0 200px;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: left;
+    justify-items: center;
+    gap: 10px;
+}
+.buttons-display button {
+    flex: 1 1 200px;
+    width: 70px;
+    height: 250px;
+    object-fit: cover;
+    filter: blur(2px);
+    border-radius: 10px;
+    border: 3px solid rgb(0,0,0);
+    font-display: normal;
+    justify-content: center;
+    transition: all ease-in-out 0.3s;
+}
+.buttons-display button:hover {
+    width: 130px;
+    filter: blur(0px);
+}
+#satc {
+    background-image: url("https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-06-512.png");
+    background-size: contain;
+    font-size: large;
+}
+#quotbutto {
+    background-image: url("https://images.desenio.com/zoom/18010-8papertexture50x70.jpg?auto=compress%2Cformat&fit=max&w=3840");
+    background-size: cover;
+    font-family: 'Times New Roman', cursive;
+    font-style: italic;
+    font-size: larger;
+}
+#button-calculator {
+    background-image: url("img_index/math-whiteboard.png");
+    color: black;
+    background-size: 50% 50%;
+    font-size: x-large;
+    font-weight: 790;
+    text-shadow: 2px 0 white;
+}
+#recipes-button {
+    background-image: url("img_index/food-recipes.png");
+    background-size: 100% 100%;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    text-shadow: 3px 0 rgb(255, 255, 255);
+}
+#tools-button {
+    background-image: url("img_index/tool.png");
+    background-size: contain;
+    color: black;
+    text-shadow: 1px 0 white;
+    font-weight: 900;
+}
+#translator-button {
+    background-image: url("img_index/translator-button.png");
+    background-size: contain;
+    font-size: small;
+    font-weight: 600;
+    font-family: Arial, 'New Times Roman';
+}
+#moving-annoying-button {
+    background-color: rgb(21, 126, 195);
+    width: 120px;
+    height: 60px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    border-radius: 13%;
+    border-color: black;
+    border-width: 3px;
+}
+
+#main-title- {
+    position: absolute;
+    font-family: cursive, courier, monospace;
+    font-style: italic;
+    text-shadow: 2px 0 rgb(188, 177, 157);
+    text-decoration-color: whitesmoke;
+    -webkit-text-stroke: 0.3px rgb(255, 255, 255);
+    animation: animation-text-title 15s infinite;
+    top: 0px;
+}
+@keyframes animation-text-title {
+    0% {color: black; left: 0%}
+    10% {color: blue;}
+    20% {color: red; }
+    30% {color: green;}
+    40% {color: rgb(152, 152, 4);}
+    50% {color: gray; left: 70%}
+    60% {color: purple;}
+    70% {color: gray;}
+    80% {color: darkgray;}
+    90% {color: darkred;}
+    100% {color: black; left: 0%;}
+}
+#user-creator-title-p {
+    position: absolute;
+    top: 45px;
+    animation: animation-text-title 15s infinite;
+    font-style: italic;
+    font-size: large;
+}
+#guessing-flag-button {
+    color: black;
+    font-size: larger;
+    font-weight: 900;
+    text-shadow: 3px 0 white;
+    background-image: url("img_index/flags-world.png");
+    background-size: contain;
+}

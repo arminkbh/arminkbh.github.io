@@ -1,8 +1,4 @@
 const button = document.getElementById("moving-annoying-button");
-function changePos() {
-    button.style.setProperty("top", Math.floor(Math.random() * window.innerWidth) + "px");
-    button.style.setProperty("left", Math.floor(Math.random() * window.innerHeight) + "px");
-}
 function setTextProperty() {
     let randChoide = Math.floor(Math.random() * 10);
     switch (randChoide) {
@@ -42,6 +38,12 @@ function setTextWait() {
     let randomWait = Math.random() * 10;
     setTimeout(setTextProperty, randomWait);
 }
+function changePos() {
+    button.style.setProperty("top", Math.floor(Math.random() * window.innerWidth) + "px");
+    button.style.setProperty("left", Math.floor(Math.random() * window.innerHeight) + "px");
+    setTextProperty();
+}
 button.addEventListener("mouseover", changePos);
+button.addEventListener("click", changePos);
 
 window.changePos = changePos;
